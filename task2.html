@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        /* Basic styling for the form */
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px; /* Space between elements */
+        }
+
+        input[type="text"], input[type="email"], input[type="tel"], input[type="submit"] {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        /* Adjusting the size of input fields */
+        input[type="text"], input[type="email"], input[type="tel"] {
+            flex: 1;
+            min-width: 150px;
+        }
+
+        /* Styling the submit button */
+        input[type="submit"] {
+            flex: 0 1 auto; /* Ensures the submit button is appropriately sized */
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Contact Form</h2>
+    <form action="/submit_form" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="tel" name="phone" placeholder="Your Phone Number" required>
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
